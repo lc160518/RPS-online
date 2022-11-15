@@ -6,15 +6,19 @@
 </head>
 <body>
 <h1>choose rock paper or scissors</h1>
-<form>
-    <input type="radio" id="rock" value="ROCK">
+
+<form id="calculate" action="#">
+    <input type="radio" id="rock" name="choice" value="ROCK">
     <label for="rock">ROCK</label><br>
-    <input type="radio" id="paper" value="PAPER">
+    <input type="radio" id="paper" name="choice" value="PAPER">
     <label for="paper">PAPER</label><br>
-    <input type="radio" id="scissor" value="SCISSOR">
+    <input type="radio" id="scissor" name="choice" value="SCISSOR">
     <label for="scissor">SCISSOR</label><br>
+    <input type="button" value="Submit" onclick="makeSearch()">
 
 </form>
-
+<p id="random"></p>
+<p id="wintext">did u win: </p>
+<script src="Koen-RPS.js"></script>
 </body>
 </html>
