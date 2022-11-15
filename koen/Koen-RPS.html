@@ -3,22 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/koen/Koen-RPS.css">
 </head>
+
+<style>
+body {
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,195,255,253));
+}
+</style>
+
 <body>
-<h1>choose rock paper or scissors</h1>
+
+<img class="rock" src="/images/rock.png" alt="rock">
+
+
+<h1>You are challenged to a game of Rock, Paper, Scissors.</h1>
+<h2>Make your choise, don't be a fool.</h2>
 
 <form id="calculate" action="#">
     <input type="radio" id="rock" name="choice" value="ROCK">
-    <label for="rock">ROCK</label><br>
+    <label for="rock">Rock</label><br>
+
     <input type="radio" id="paper" name="choice" value="PAPER">
-    <label for="paper">PAPER</label><br>
+    <label for="paper">Paper</label><br>
+
     <input type="radio" id="scissor" name="choice" value="SCISSOR">
-    <label for="scissor">SCISSOR</label><br>
+    <label for="scissor">Scissors</label><br>
+
     <input type="button" value="Submit" onclick="makeSearch()">
 
 </form>
 <p id="random"></p>
 <p id="wintext">did u win: </p>
+
+
+
 <script src="Koen-RPS.js"></script>
 </body>
 </html>
