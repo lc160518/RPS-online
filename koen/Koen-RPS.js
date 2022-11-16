@@ -18,4 +18,3 @@ function makeSearch(){
         document.getElementById("wintext").innerHTML = "did u win: win!"
     }
 }
-
