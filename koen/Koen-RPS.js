@@ -1,14 +1,28 @@
-const dict = {
+//dictionary linking id's to move's
+const moves = {
     0 : "rock",
     1 : "paper",
     2 : "scissor"
 }
 
+//Makes a class for each move
+const rock = new Move(0, [2]);
+const paper = new Move(1, [0]);
+const scissor = new Move(2, [1]);
+
+//Class that stores each move's id and all id's of moves it wins against.
+class Move{
+    constructor(id, wins) {
+        this.id = id;
+        this.wins = wins;
+    }
+}
+
 
 function makeSearch(){
-    const rock = document.getElementById("rock");
-    const paper = document.getElementById("paper");
-    const scissor = document.getElementById("scissor");
+    const rock = document.getElementById("rock").checked;
+    const paper = document.getElementById("paper").checked;
+    const scissor = document.getElementById("scissor").checked;
 
 
 
