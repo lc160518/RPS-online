@@ -1,14 +1,4 @@
-//dictionary linking id's to move's
-const moves = {
-    0 : "rock",
-    1 : "paper",
-    2 : "scissor"
-}
 
-//Makes a class for each move
-const rock = new Move(0, [2]);
-const paper = new Move(1, [0]);
-const scissor = new Move(2, [1]);
 
 //Class that stores each move's id and all id's of moves it wins against.
 class Move{
@@ -18,24 +8,60 @@ class Move{
     }
 }
 
+//Makes a class for each move
+const rockMove = new Move(0, [2]);
+const paperMove = new Move(1, [0]);
+const scissorMove = new Move(2, [1]);
+
+//dictionary linking name's to id's
+const names = {
+    "rock" : 0,
+    "paper" : 1,
+    "scissor" : 2
+}
+
+//dictionary linking id's to move's
+const moves = {
+    0 : rockMove,
+    1 : paperMove,
+    2 : scissorMove
+}
+
+
 
 function makeSearch(){
+
     const rock = document.getElementById("rock").checked;
     const paper = document.getElementById("paper").checked;
     const scissor = document.getElementById("scissor").checked;
 
+    var currentMove = null;
+
+    if(rock){
+        currentMove = names["rock"];
+    }
+    if(paper){
+        currentMove = names["paper"];
+    }
+    if(scissor){
+        currentMove = names["scissor"];
+    }
+
+
 
 
     const opponentChoice = Math.floor(Math.random() * 3);
-    document.getElementById("random").innerHTML = "" + opponentChoice;
+    document.getElementById("random").innerHTML = "" + opponentChoice + " " + currentMove;
 
-    if((rock.checked && opponentChoice == 0) || (paper.checked && opponentChoice == 1) || (scissor.checked && opponentChoice == 2)){
-        document.getElementById("wintext").innerHTML = "did u win: tie!"
+    currentMove = moves[currentMove];
+    if(currentMove.wins.includes(opponentChoice)){
+        document.getElementById("wintext").innerHTML = "win";
     }
-    if((rock.checked && opponentChoice == 1) || (paper.checked && opponentChoice == 2) || (scissor.checked && opponentChoice == 0)){
-        document.getElementById("wintext").innerHTML = "did u win: lose!"
+    else if(currentMove.id === opponentChoice){
+        document.getElementById("wintext").innerHTML = "tie";
     }
-    if((rock.checked && opponentChoice == 2) || (paper.checked && opponentChoice == 0) || (scissor.checked && opponentChoice == 1)){
-        document.getElementById("wintext").innerHTML = "did u win: win!"
+    else{
+        document.getElementById("wintext").innerHTML = "lose";
     }
+
 }
