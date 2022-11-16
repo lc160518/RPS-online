@@ -1,0 +1,25 @@
+.RPS{
+  position: relative;
+  z-index: 2;
+}
+
+.rock{
+    scale: 30%;
+    position: absolute;
+    transform: rotate(10deg);
+}
+
+.paper{
+    scale: 30%;
+    left: 300px;
+    transform: rotate(0deg);
+}
+
+.scissors{
+    scale: 30%;
+    transform: rotate(0deg);
+}
+
+body {
+ background-image: url("./images/rock.png");
+}
