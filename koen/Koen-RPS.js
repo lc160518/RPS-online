@@ -1,3 +1,10 @@
+const dict = {
+    0 : "rock",
+    1 : "paper",
+    2 : "scissor"
+}
+
+
 function makeSearch(){
     const rock = document.getElementById("rock");
     const paper = document.getElementById("paper");

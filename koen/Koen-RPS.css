@@ -22,3 +22,12 @@
 
 body {
 }
+
+.centerText{
+    text-align: center;
+}
+
+.form{
+    display: inline-block;
+    text-align: left;
+}
