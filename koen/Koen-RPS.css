@@ -1,33 +1,96 @@
-.RPS{
-  position: relative;
-  z-index: 2;
-}
-
-.rock{
-    scale: 30%;
-    position: absolute;
-    transform: rotate(10deg);
-}
-
-.paper{
-    scale: 30%;
-    left: 300px;
-    transform: rotate(0deg);
-}
-
-.scissors{
-    scale: 30%;
-    transform: rotate(0deg);
-}
 
 body {
-}
-
-.centerText{
-    text-align: center;
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
 }
 
 .form{
-    display: inline-block;
-    text-align: left;
+display: inline-block;
+text-align: center;
+}
+
+.centerText{
+  text-align: center;
+
+}
+
+.rock {
+float:left;
+outline-style: solid;
+outline-width: thin;
+background:#F3F3F3;
+height:100px;
+width: 200px;
+border-radius: 15px;
+}
+
+.rock:hover{
+  background:#E6E6E6;
+}
+
+.rock.img{
+  width: 10%;
+  height: auto;
+}
+
+
+.paper{
+float:left;
+outline-style: solid;
+outline-width: thin;
+background:#F3F3F3;
+height:100px;
+width: 200px;
+border-radius: 15px;
+margin-right: 10px;
+margin-left: 10px;
+}
+
+.paper:hover{
+  background:#E6E6E6;
+}
+
+.scissors{
+float:right;
+outline-style: solid;
+outline-width: thin;
+background: #F3F3F3;
+height:100px;
+width: 200px;
+border-radius: 15px;
+}
+
+.scissors:hover{
+  background:#E6E6E6;
+}
+
+
+.submit{
+margin-top: 120px;
+}
+
+.header{
+overflow: show;
+position: relative;
+padding: 20px 50px;
+text-align: center;
+}
+
+.header::before{
+background-image: url("../images/rps_unedited.png");
+content: "";
+position: absolute;
+z-index: -1;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+opacity: .4;
+
+
+}
+
+.line{
+margin-top: 0px;
+margin-bottom: 10px;
 }

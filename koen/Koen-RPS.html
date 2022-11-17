@@ -6,33 +6,43 @@
     <link rel="stylesheet" href="Koen-RPS.css">
 </head>
 
-<style>
-body {
-  background-image: url("./images/rock.png") repeat;
-  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,195,255,253));
-}
-</style>
-
 <body>
+
+<div class="header">
+  <div>
+    <h1>You are challenged to a game of Rock, Paper, Scissors.</h1>
+    <h2>Make your choise, don't be a fool.</h2>
+  </div>
+</div>
+
+<hr class="line"/>
+
+
 <div class="centerText">
-<h1>You are challenged to a game of Rock, Paper, Scissors.</h1>
-<h2>Make your choise, don't be a fool.</h2>
+  <form class="form" id="calculate" action="#">
 
-<form class="form" id="calculate" action="#">
-    <input type="radio" id="rock" name="choice" value="ROCK">
-    <label for="rock">Rock</label><br>
+    <div class="rock">
+      <input type="radio" id="rock" name="choice" value="ROCK">
+      <label for="rock">Rock</label><br>
+    </div>
 
-    <input type="radio" id="paper" name="choice" value="PAPER">
-    <label for="paper">Paper</label><br>
+    <div class="paper">
+      <input type="radio" id="paper" name="choice" value="PAPER">
+      <label for="paper">Paper</label><br>
+    </div>
 
-    <input type="radio" id="scissor" name="choice" value="SCISSOR">
-    <label for="scissor">Scissors</label><br>
+    <div class="scissors">
+      <input type="radio" id="scissor" name="choice" value="SCISSOR">
+      <label for="scissor">Scissors</label><br>
+    </div>
 
-    <input type="button" value="Submit" onclick="makeSearch()">
+    <div class="submit">
+      <input type="button" value="Submit" onclick="makeSearch()">
+    </div>
 
-</form>
-<p id="random"></p>
-<p id="wintext">did u win: </p>
+  </form>
+  <p id="random"></p>
+  <p id="wintext">did u win: </p>
 </div>
 
 
